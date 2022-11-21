@@ -471,8 +471,6 @@
   height: 800px;
 }
 .main-slider .swiper-slide {
-  background: url(../img/verticalSlider/bg.png);
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -485,6 +483,13 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  background-size: cover !important;
+}
+.main-slider .slide-1 {
+  background: url(../img/verticalSlider/bg1.png);
+}
+.main-slider .slide-2 {
+  background: url(../img/verticalSlider/bg2.jpg);
 }
 .main-slider .swiper-slide img {
   display: block;
@@ -537,15 +542,32 @@
   color: #F1F1F1;
   margin-bottom: 27px;
 }
-.main-slider .slide-shop {
-  position: unset;
+.main-slider .main-slider-shop {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
   background: #DA291F;
+  border-radius: 6px;
+  text-transform: uppercase;
+  padding: 7px 30px;
 }
-.main-slider .slide-shop:hover {
+.main-slider .main-slider-shop:hover {
   background: #fff;
   color: #DA291F;
 }
 
+@media (max-width: 1023px) {
+  .main-slider .slide-1 {
+    background: url(../img/verticalSlider/bg1Mobile.jpg);
+  }
+  .main-slider .slide-2 {
+    background: url(../img/verticalSlider/bg2Mobile.jpg);
+  }
+  .main-slider .swiper-pagination {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .main-slider .swiper {
     height: 600px;
@@ -668,6 +690,7 @@
 }
 .specials {
   padding-top: 54px;
+  background: none;
 }
 .specials .container {
   border-bottom: 1px solid rgba(102, 102, 102, 0.5);
@@ -966,9 +989,29 @@
 .footer-end__pay {
   text-align: end;
 }
+.footer-end__pay i {
+  margin-right: 12px;
+}
+.footer-end__pay i:last-child {
+  margin-right: 0;
+}
+@media (max-width: 991px) {
+  .footer i {
+    margin-right: 1px;
+  }
+  .footer i:last-child {
+    margin-right: 0;
+  }
+}
 @media (max-width: 768px) {
   .footer .footer-end__pay {
     text-align: center;
+  }
+  .footer .footer-end__pay i {
+    margin-right: 12px;
+  }
+  .footer .footer-end__pay i:last-child {
+    margin-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -979,8 +1022,8 @@
 
 #btn-back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 100px;
+  right: 15px;
   display: none;
   z-index: 5;
 }
