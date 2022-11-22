@@ -972,10 +972,10 @@
 .footer-info__email a {
   padding-left: 3px;
 }
-.footer-touch li {
+.footer-touch li, .footer-support li {
   margin-bottom: 21px;
 }
-.footer-touch li:last-child {
+.footer-touch li:last-child, .footer-support li:last-child {
   margin-bottom: 0;
 }
 .footer-form {
